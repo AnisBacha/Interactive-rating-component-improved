@@ -102,21 +102,27 @@ label:hover{
 
 @media screen and (min-width: 1024px) {
     .main{
+        border-radius: 30px;
         max-width: 410px;
         max-height: 415px;
         padding-inline: 2rem;
         padding-block: 0;
+    }
+    .thankyou{
+        min-height: 400px;
     }
     .main__star{
         margin-block: 2rem 1.5rem;
     }
     .main__h1{
         margin-block: 0 1.5rem;
+        font-size: 1.625rem;
     }
     .main__p{
         margin-block: 0 1.5rem;
+        line-height: 1.7;
     }
     .main__button{
-        margin-block: 2rem;
+        margin-block: 1.5rem 2rem;
     }
 }
