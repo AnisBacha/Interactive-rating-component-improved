@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(216, 12%, 8%);
+    font-family: 'Overpass';
+    color: white;
+    padding: 1rem;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    background: linear-gradient(0deg, rgba(25,29,39,1) 0%, rgba(30,37,47,1) 100%);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.main__star{
+    background-color: hsl(213, 19%, 18%);
+    padding: 1rem;
+    border-radius: 50%;
+}
+.main__h1{
+    margin-block: 1rem;
+    font-weight: 600;
+}
+.main__p{
+    color: hsl(217, 12%, 63%);
+    font-size: 0.9375rem;
+    margin-block: 1rem;
+}
+
+
+input{
+    display: none;
+}
+.main__rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+label { 
+    background-color: hsl(213, 19%, 18%);
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    width: 50px; /* or any fixed size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input:checked ~ label {
+    background-color: hsl(25, 97%, 53%);
+}
+
+
+.main__button{
+    font-family: "Overpass";
+    font-weight: 700;
+    letter-spacing: .25ch;
+    width: 100%;
+    border: 0;
+    color: black;
+    padding: 1rem;
+    margin-block: 2rem 1rem;
+    background-color: hsl(25, 97%, 53%);
+    border-radius: 30px;
+}
+
+.main__button:hover,
+.main__button:active,
+label:hover{
+    background-color: white;
+    color: hsl(216, 12%, 8%);    
+}
+
+.thankyou{
+    padding-block: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__selected-rating{
+    background-color: rgb(35, 42, 51);
+    color: hsla(25, 97%, 53%, 0.856);
+    margin-block: 1.5rem 1rem;
+    padding: 1rem;
+    padding-block: .75rem;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+    .main{
+        max-width: 410px;
+        max-height: 415px;
+        padding-inline: 2rem;
+        padding-block: 0;
+    }
+    .main__star{
+        margin-block: 2rem 1.5rem;
+    }
+    .main__h1{
+        margin-block: 0 1.5rem;
+    }
+    .main__p{
+        margin-block: 0 1.5rem;
+    }
+    .main__button{
+        margin-block: 2rem;
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+    <main class="main thankyou">
+        <img src="./images/illustration-thank-you.svg" alt="illustration">
+        <p class="main__selected-rating" id="rating">You selected out of 5</p>
+    
+        <h1 class="main__h1">Thank you!</h1>
+    
+        <p class="main__p">
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don't hesitate to get in touch!
+        </p>
+    </main>
+    <script>
+        const rating = localStorage.getItem('ratingValue');
+        const paragraph = document.getElementById('rating');
+        if (rating) {
+        paragraph.textContent = `You selected ${rating} out of 5.`;
+        } else {
+        paragraph.textContent = "You did not select any rating.";
+        }
+    </script>
+</body>
+</html>
